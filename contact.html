@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <title>FurnyStyle - კონტაქტი</title>
+</head>
+
+<body>
+    <header>
+        <h1><a href="main.html">FurnyStyle</a></h1>
+
+        <nav>
+            <ul>
+                <li><a href="main.html">მთავარი</a></li>
+                <li><a href="#">კატალოგი</a></li>
+                <li><a href="about.html">ჩვენ შესახებ</a></li>
+                <li><a href="contact.html" class="active">კონტაქტი</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-container">
+        <section class="contact-hero">
+            <h2>დაგვიკავშირდით</h2>
+            <p>გვსურს მოვისმინოთ თქვენგან - შეგვეხმიანეთ ნებისმიერი კითხვის ან შეკვეთის შესახებ</p>
+        </section>
+
+        <div class="contact-grid">
+            <section class="contact-info">
+                <div class="info-card">
+                    <div class="icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>მისამართი</h3>
+                    <p>ხელოსნების ქალაქი, თბილისი</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>ტელეფონი</h3>
+                    <p>+995 599 123 456</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>სამუშაო საათები</h3>
+                    <p>ორშაბათი - პარასკევი: 10:00 - 19:00</p>
+                    <p>შაბათი: 11:00 - 17:00</p>
+                    <p>კვირა: დასვენების დღე</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>სოციალური ქსელები</h3>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="X / Twitter"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact-form-section">
+                <div class="form-container">
+                    <h3>მოგვწერეთ შეტყობინება</h3>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">სახელი</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">ტელეფონის ნომერი</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="interest">რა გაინტერესებთ?</label>
+                            <select id="interest" name="interest">
+                                <option value="consultation">კონსულტაცია</option>
+                                <option value="custom">ინდივიდუალური დიზაინი</option>
+                                <option value="catalog">პროდუქციის კატალოგი</option>
+                                <option value="visit">მაღაზიაში ვიზიტი</option>
+                                <option value="other">სხვა</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">შეტყობინება</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <div class="form-group form-check">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <label for="privacy">ვეთანხმები <a href="#">პერსონალური მონაცემების დაცვის პოლიტიკას</a></label>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="submit-btn">გაგზავნა</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+
+        <section class="virtual-showroom">
+            <h3>ვირტუალური შოურუმი</h3>
+            <p>დაათვალიერეთ ჩვენი პროდუქცია ონლაინ. შეარჩიეთ ავეჯი და დაგვიკავშირდით მისი შეძენისთვის.</p>
+            <a href="#" class="showroom-btn">შოურუმის ნახვა</a>
+        </section>
+        
+        <section class="map-section">
+            <h3>როგორ მოგვაკითხოთ</h3>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2974.1086329654113!2d44.789683675230144!3d41.804420170025345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40446c29c95e9047%3A0x8f38f086ba274f12!2sXelosnebis%20qalaqi%2C%20T&#39;bilisi!5e0!3m2!1sen!2sge!4v1741678299856!5m2!1sen!2sge" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </main>
+    
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('თქვენი შეტყობინება მიღებულია! მალე დაგიკავშირდებით.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
