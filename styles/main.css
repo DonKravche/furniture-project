@@ -230,6 +230,9 @@ footer .upper-footer .socials .icons a {
 footer .upper-footer .socials .icons a:hover {
   color: #f1c40f;
 }
+footer .upper-footer .address {
+  margin-bottom: 25px;
+}
 footer .upper-footer .map iframe {
   width: 100%;
   height: 180px;
