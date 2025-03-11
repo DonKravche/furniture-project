@@ -1,0 +1,182 @@
+$background-color: #f8f8f8;
+$color: #333;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: $background-color;
+    color: $color;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 10%;
+    background-color: $background-color;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    h1 {
+        font-size: 30px;
+        color: #222;
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    nav {
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+
+            li {
+                color: #222;
+
+                a {
+                    font-size: 20px;
+                    text-decoration: none;
+                    font-weight: bold;
+                    transition: $color 0.3;
+                }
+
+                a:hover {
+                    color: #007bff;
+                }
+            }
+        }
+    }
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 150px 10%;
+
+    h2 {
+        text-align: center;
+        font-size: 35px;
+    }
+
+    p {
+        text-align: center;
+        font-size: 25px;
+    }
+}
+
+.gallery-container {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .gallery {
+        width: 100%;
+        position: relative;
+        height: 500px; // Increased height for better visibility
+        border-radius: 10px;
+        overflow: hidden; // Ensure content stays within container
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+            
+            &.active {
+                opacity: 1;
+                z-index: 1; // Ensure active slide is on top
+            }
+
+            a {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain; // Changed from cover to contain to ensure full image visibility
+                border-radius: 10px;
+                cursor: pointer;
+                
+                // Add slide animation properties
+                transition: transform 0.5s ease-in-out;
+                
+                &.slide-animation {
+                    animation: slideLeftRight 1s ease-in-out;
+                }
+                
+                &:hover {
+                    transform: scale(1.03);
+                }
+            }
+        }
+    }
+}
+
+@keyframes slideLeftRight {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-30px); }
+    75% { transform: translateX(30px); }
+    100% { transform: translateX(0); }
+}
+
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8); // Semi-transparent background
+    border: none;
+    cursor: pointer;
+    padding: 15px; // Increased size for better visibility
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    z-index: 10;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        background: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.left { left: 10px; }
+.right { right: 10px; }
+
+// Add indicators for current slide
+.slide-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+    
+    .indicator {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        transition: background 0.3s ease;
+        
+        &.active {
+            background: white;
+        }
+    }
+}
+
+
